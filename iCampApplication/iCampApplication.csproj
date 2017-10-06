@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEE9627C-B6AD-4385-9BE0-8A2D98EFFD83}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>iCampApplication</RootNamespace>
+    <AssemblyName>iCampApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Bunifu Technologies\Bunifu Framework Manager\bin\updates\Bunifu UI 1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivityRegister.Designer.cs">
+      <DependentUpon>ActivityRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBAccess.cs" />
+    <Compile Include="Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exportDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exportDetails.Designer.cs">
+      <DependentUpon>exportDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registerStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registerStudent.Designer.cs">
+      <DependentUpon>registerStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signupSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signupSheet.Designer.cs">
+      <DependentUpon>signupSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentActivityRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentActivityRegister.Designer.cs">
+      <DependentUpon>studentActivityRegister.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActivityRegister.resx">
+      <DependentUpon>ActivityRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details.resx">
+      <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exportDetails.resx">
+      <DependentUpon>exportDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="registerStudent.resx">
+      <DependentUpon>registerStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signupSheet.resx">
+      <DependentUpon>signupSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentActivityRegister.resx">
+      <DependentUpon>studentActivityRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
